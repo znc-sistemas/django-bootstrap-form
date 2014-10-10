@@ -115,10 +115,10 @@ def pagination(page, pages_to_show=11):
     Generate Bootstrap pagination links from a page object
     """
     context = get_pagination_context(page, pages_to_show)
-    return get_template("bootstrap_toolkit/pagination.html").render(Context(context))
+    return get_template("bootstrapform/pagination.html").render(Context(context))
 
 
-@register.inclusion_tag("bootstrap_toolkit/pagination.html")
+@register.inclusion_tag("bootstrapform/pagination.html")
 def bootstrap_pagination(page, **kwargs):
     """
     Render pagination for a page
