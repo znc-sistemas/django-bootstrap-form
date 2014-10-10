@@ -145,8 +145,8 @@ def get_pagination_context(page, pages_to_show=11, url=None, size=None, align=No
         first_page = 1
     if first_page > 1:
         pages_back = first_page - half_page_num
-    if pages_back < 1:
-        pages_back = 1
+        if pages_back < 1:
+            pages_back = 1
     else:
         pages_back = None
     last_page = first_page + pages_to_show - 1
